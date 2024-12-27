@@ -49,20 +49,36 @@ nav {
     color: black;
 }
 
+.nav-listBurger{
+    display: none;
+}
+
 .btn {
     padding: 0.75rem 1rem;
     background: white;
-    outline: none;
+    outline: 0;
     cursor: pointer;
     border-radius: 0.5rem;
     margin-top: -1rem;
+    border: 0;
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 30px;
+    padding: 0px 15px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    background: linear-gradient(to bottom, lightblue, lightblue);
+    transition: all 0.5s ease 0s;
+  
+    
+}
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
 }
 
-.btn-secundary {
-    border: 1px solid white;
-    color: white;
-    font-weight: bold;
-}
 
 .main-content {
     display: flex;
@@ -88,6 +104,7 @@ nav {
     height: 2rem;
     width: 2rem;
 }
+
 
 .eventos {
     background-color: #ebc64c;
@@ -156,7 +173,7 @@ img {
     display: flex;
     flex-direction: column;
     width: 22rem;
-    box-shadow: 0 0.1rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0rem 1rem rgba(0, 0, 0, 0.1);
     border-radius: 1em;
     background: linear-gradient(to right, #FFFFFF, #ECE9E6);
 }
@@ -187,7 +204,7 @@ img {
     justify-content: center;
     border-radius:2rem;
     overflow: hidden;
-    box-shadow: 0.5rem 0.5rem 1rem grey;
+    box-shadow: 1rem 1rem 1rem grey;
     margin: 2rem;
 }
 
@@ -202,7 +219,7 @@ img {
     top: 55%;
     left: -5px;
     height: 65%;
-    width: 108%;
+    width: 100%;
     transform: skew(19deg, -9deg);
 }
 
@@ -258,8 +275,8 @@ footer .social li {
 }
 
 footer .social img {
-    width: 1.875rem;
-    height: 1.875rem;
+    width: 2rem;
+    height: 2rem;
     transition: transform 0.3s;
 }
 
@@ -268,8 +285,9 @@ footer .Copyright {
 }
 
 footer .Copyright p {
-    margin: 0.3125rem 0;
+    margin: 0.3rem 0;
 }
+
 
 @media screen and (max-width: 1200px){
     .logo {
@@ -285,7 +303,7 @@ footer .Copyright p {
     }
 
     .main-content .intro-heading {
-        font-size: 2.75rem;
+        font-size: 3rem;
     }
 
     .main-content p {
@@ -348,6 +366,13 @@ footer .Copyright p {
         width: 18rem;
     }
     
+    .text{
+        top: 50%;
+        left: 10px;
+        height: 90%;
+        width: 108%;
+
+    }
     .evento-btn {
         margin-top: 1rem;
         padding: 0.5rem 0.5rem;
@@ -364,6 +389,7 @@ footer .Copyright p {
         min-width: 20rem;
         height: 30rem;
     }
+    
 }
 
 @media screen and (max-width: 480px) {
@@ -384,6 +410,9 @@ footer .Copyright p {
 
     .main-content p {
         max-width: 10rem;
+    }
+    .headercontainer{
+        position: static;
     }
 
     .container {
@@ -420,9 +449,96 @@ footer .Copyright p {
         width: 80%;
         text-align: center;
     }
+    
+    .menu-btn {
+        top: 1rem;
+        display: block;
+    }
 
-
+    .nav-listBurger {
+        display: none;
+        flex-direction: column;
+        gap: 2rem;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to bottom, lightblue, white);
+        padding: 1rem;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        z-index: 2;
+        list-style: none;
+    }
+    
+    .nav-listBurger.active {
+        display: flex;
+        transform: translateY(0);
+        opacity: 1;
+    }
+    .menu-btn.menu-btn.active {
+        top: 1rem;
+        display: block;
+        z-index: 3;
+    }
+    .menu-btn {
+        cursor: pointer;
+    }
+    
+    .menu-btn.active + .nav-list {
+        display: flex;
+    }
+    .nav-list{
+        display: none;
+    }
     .carousel button {
         padding: 0.25rem;
+    }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1800px) {
+    .eventsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 40rem);
+        gap: 2rem;
+        margin-bottom: 20rem;
+    }
+
+    .noticia, .eventos {
+        width: 100%;
+    }
+    .noticia {
+        width: 25rem;
+        min-width: 25rem;
+        height: 25rem;
+        border-radius:2rem;
+        overflow: hidden;
+        box-shadow: 1rem 1rem 1rem grey;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1199px) {
+    .eventsContainer {
+        display: grid;
+        grid-template-columns: repeat(2, 30rem);
+        gap: 2rem;
+        margin-bottom: 20rem;
+    }
+
+    .noticia, .eventos {
+        width: 100%;
+    }
+    .noticia {
+        width: 25rem;
+        min-width: 25rem;
+        height: 25rem;
+        border-radius:2rem;
+        overflow: hidden;
+        box-shadow: 1rem 1rem 1rem grey;
+        margin: 0 auto;
     }
 }

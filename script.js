@@ -17,3 +17,14 @@ function updateSlidePosition() {
 }
 
 setInterval(showNextSlide, 3000); 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const menuBtn = document.getElementById("menu-btn");
+    const navList = document.getElementById("nav-list");
+
+    menuBtn.addEventListener("click", () => {
+        navList.classList.toggle("active");
+        menuBtn.classList.toggle("active");
+    });
+});

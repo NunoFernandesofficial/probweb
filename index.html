@@ -19,7 +19,7 @@
                 <img src="/logo.png" alt="Logoipluso" class="logo">
                 <ul class="nav-list">
                     <li><a href="#">Inicio</a></li>
-                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="eventos.html">Espaços/Eventos</a></li>
                     <li><a href="serviços.html">Serviços</a></li>
                     <li><a href="contactos.html">Contactos</a></li>
                     <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
@@ -47,6 +47,16 @@
             <button class="next" onclick="showNextSlide()">&#10095;</button>
         </div>
         <script src="script.js"></script>
+
+        
+    <script>
+      const navBtn = document.querySelector(".menu-btn");
+      const navList = document.querySelector(".nav-list");
+
+      navBtn.addEventListener("click", function () {
+          navList.classList.toggle("active");
+      });
+  </script>
     </section>
   
     <section class="info-section">
@@ -101,9 +111,9 @@
               <p>Mais de 80% dos estudantes elogiaram o StudentHub pela sua facilidade de uso e impacto positivo no planeamento das suas atividades académicas e sociais.</p>
             </div>
            
-            <div class="evento-btn">
+            <button class="evento-btn" >
               <a href="eventos.html" >Saber mais</a>
-            </div>
+            </button>
           </div>
         
           <div class="evento noticia">
@@ -114,9 +124,9 @@
               <p>Os estudantes poderão participar na sessão 'StudentHub em Ação', onde especialistas explicarão como tirar partido da plataforma para o seu sucesso académico.</p>
             </div>
 
-            <div class="evento-btn">
-              <a href="eventos.html">Saber mais</a>
-            </div>
+            <button class="evento-btn" >
+              <a href="eventos.html" >Saber mais</a>
+            </button>
           </div>
         
           <div class="noticia">
@@ -126,9 +136,9 @@
               <p>Estudantes afirmam que o StudentHub simplificou o processo de obtenção de informações, permitindo-lhes focar mais nos seus objetivos académicos.</p>
             </div>
             
-            <div class="evento-btn">
-              <a href="eventos.html">Saber mais</a>
-            </div>
+            <button class="evento-btn" >
+              <a href="eventos.html" >Saber mais</a>
+            </button>
           </div>
 
           <div class="evento noticia">
@@ -139,9 +149,9 @@
               <p>A universidade realiza uma sessão de formação especial para novos alunos, introduzindo as principais funcionalidades do StudentHub e respondendo a dúvidas.</p>
             </div>
            
-            <div class="evento-btn">
-              <a href="eventos.html">Saber mais</a>
-            </div>
+            <button class="evento-btn">
+              <a href="eventos.html" >Saber mais</a>
+            </button>
             
     </section>
 
@@ -164,13 +174,5 @@
     </div>
     </footer>
 
-    <script>
-        const navBtn = document.querySelector(".menu-btn");
-        const navList = document.querySelector(".nav-list");
-
-        navBtn.addEventListener("click", function () {
-            navList.classList.toggle("active");
-        });
-    </script>
 </body>
 </html>

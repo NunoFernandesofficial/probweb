@@ -3,9 +3,187 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Studenthub</title>
+    <link rel="stylesheet" href="eventos.css">
+    
 </head>
 <body>
-    eventos
+    <section id="main">
+        <script>
+            function navigateToDirectory() {
+                window.location.href = "login.html";
+            }
+        </script>
+        <div class="headercontainer">
+            <nav>
+                <img src="/logo.png" alt="Logoipluso" class="logo">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Espaços/Eventos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+                    </ul>
+                    <img src="bgmenu.svg" alt="" class="menu-btn" id="menu-btn">
+              <ul class="nav-listBurger" id="nav-list">
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="eventos.html">Espaços/Eventos</a></li>
+                  <li><a href="serviços.html">Serviços</a></li>
+                  <li><a href="contactos.html">Contactos</a></li>
+                  <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+              </ul>
+            </nav>
+                  </div>
+                  <script src="script.js"></script>
+    <script>
+        const navBtn = document.querySelector(".menu-btn");
+        const navList = document.querySelector(".nav-list");
+
+        navBtn.addEventListener("click", function () {
+            navList.classList.toggle("active");
+        });
+    </script>
+
+       
+    </section>
+
+
+    <section id="eventosBlocos">
+                
+
+        <div class="container">
+            <div class="Eventcard">
+            <div class="innerbox">
+                <img class="img" src="pág espaços e eventos/secção 2 e 3/img-15.jpg" />
+                <div class="textbox">
+                <div class="title">Centro de Convívio                </div>
+                <br><hr><br><br>
+                <div class="description">Um ambiente descontraído onde os estudantes podem socializar, jogar jogos de tabuleiro ou simplesmente relaxar.</div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="Eventcard">
+            <div class="innerbox">
+                <img class="img" src="pág espaços e eventos/secção 2 e 3/img-16.jpg" />
+                <div class="textbox">
+                <div class="title">Auditório de Ciências</div>
+                <br><hr><br><br>
+                <div class="description"> Espaço destinado a aulas e palestras específicas para áreas científicas, equipado com tecnologia de ponta.</div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="Eventcard">
+            <div class="innerbox">
+                <img class="img" src="pág espaços e eventos/secção 2 e 3/img-8.jpg" />
+                <div class="textbox">
+                <div class="title">Biblioteca Central</div>
+                <br><hr><br><br>
+                <div class="description">Um espaço moderno e silencioso, ideal para pesquisa e estudo individual, com acesso a milhares de livros e recursos digitais.
+                </div>
+            </div>
+            </div>
+            </div>
+            
+            <div class="Eventcard" >
+            <div class="innerbox">
+                <img class="img" src="pág espaços e eventos/secção 2 e 3/img-12.jpg" />
+                <div class="textbox">
+                <div class="title">Sala de Estudo Colaborativo</div>
+                <br><hr><br><br>
+                <div class="description">Equipada com mesas de trabalho em grupo e tecnologia multimédia, perfeita para projetos e discussões académicas.</div>
+                
+                </div>
+            </div>
+            </div>
+            
+        </div>
+    </section>
+
+       
+    <section >
+            <ul class="cards">
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="pág espaços e eventos/secção 2 e 3/img-1.jpg"  />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Explorando o Campus com o StudentHub</h2>
+                    <div class="card_text">
+                      <p>O evento 'Explorando o Campus com o StudentHub' convida os estudantes a descobrir como esta plataforma pode transformar a sua experiência universitária. A atividade incluirá um tour pelo campus, destacando os espaços disponíveis e mostrando como o StudentHub facilita o acesso a informações sobre horários, serviços e eventos.
+                      <br><br>  Os participantes terão a oportunidade de testar funcionalidades práticas, como reservas de salas e inscrições em atividades.</p>
+                      </div></div></div></li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="pág espaços e eventos/secção 2 e 3/img-2.jpg" />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Tour pelos Novos Espaços de Estudo</h2>
+                    <div class="card_text">
+                      <p>
+                        O tour pelos novos espaços de estudo do campus permitirá que os estudantes explorem as áreas recentemente renovadas, equipadas com tecnologia de ponta e ambientes adaptáveis. <br><br>Os guias apresentarão as funcionalidades disponíveis, como zonas de coworking, áreas de silêncio e recursos tecnológicos. O evento é uma oportunidade única para conhecer todas as opções e escolher o espaço que melhor se adapta às suas necessidades.
+                    </p></div></div></div></li>
+              <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="pág espaços e eventos/secção 2 e 3/img-3.jpg" alt="A side view of a plate of figs and berries." />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Evento de Boas-Vindas para Estudantes</h2>
+                    <div class="card_text">
+                      <p>Para dar início ao novo semestre, a universidade organiza um evento de boas-vindas dedicado aos novos estudantes. Este evento não só apresentará o StudentHub como uma ferramenta indispensável para a vida académica, mas também oferecerá uma visão geral das funcionalidades mais úteis da plataforma. A programação incluirá apresentações, atividades de integração e momentos para esclarecer dúvidas com os responsáveis pela plataforma.
+                    </p></div></div></div></li>
+                    <li class="cards_item">
+                        <div class="card">
+                          <div class="card_image">
+                            <img src="pág espaços e eventos/secção 2 e 3/img-4.jpg" alt="A side view of a plate of figs and berries." />
+                          </div>
+                          <div class="card_content">
+                            <h2 class="card_title">Palestra 'O Futuro das Tecnologias da Informação'</h2>
+                            <div class="card_text">
+                              <p>A palestra 'O Futuro das Tecnologias da Informação' será liderada por especialistas do setor, que discutirão as tendências mais recentes e as perspetivas de carreira na área. Este evento é ideal para estudantes interessados em tecnologia, oferecendo insights valiosos sobre como se preparar para um mercado de trabalho em constante evolução. Haverá espaço para perguntas e networking com os palestrantes.
+                            </p></div></div></div></li>
+                    <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="pág espaços e eventos/secção 2 e 3/img-5.jpg" alt="A side view of a plate of figs and berries." />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Inauguração da Biblioteca Digital</h2>
+                    <div class="card_text">
+                      <p>A universidade celebra a inauguração da sua nova biblioteca digital, um recurso que permite aos estudantes acederem a milhares de títulos de forma rápida e prática. O evento incluirá uma apresentação detalhada das funcionalidades da biblioteca, conduzida por especialistas, que ensinarão os participantes a realizar pesquisas avançadas e a organizar os seus materiais de estudo.<br><br> Esta é uma excelente oportunidade para conhecer uma ferramenta essencial para o sucesso académico.
+                    </p></div></div></div></li>
+                    <li class="cards_item">
+                <div class="card">
+                  <div class="card_image">
+                    <img src="pág espaços e eventos/secção 2 e 3/img-6.jpg" alt="A side view of a plate of figs and berries." />
+                  </div>
+                  <div class="card_content">
+                    <h2 class="card_title">Tour pelos Novos Espaços de Estudo:</h2>
+                    <div class="card_text">
+                      <p>O tour pelos novos espaços de estudo do campus permitirá que os estudantes explorem as áreas recentemente renovadas, equipadas com tecnologia de ponta e ambientes adaptáveis. Os guias apresentarão as funcionalidades disponíveis, como zonas de coworking, áreas de silêncio e recursos tecnológicos. O evento é uma oportunidade única para conhecer todas as opções e escolher o espaço que melhor se adapta às suas necessidades.
+                      
+                    </p></div></div></div></li>
+                   
+                </ul>
+          </div>
+
+    </section>
+    <footer>
+
+        
+        <div class="social">
+            <li><a href="https://www.facebook.com/iplusofonia" target="_blank"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/iplusofonia/" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com/@ipluso-institutopolitecnic9048" target="_blank"><img src="youtube.png" alt="YouTube"></a></li>
+        </div>
+        <div class="Copyright">
+        <p>Copyright © Studenthub IPLUSO</p>
+        <p>info@ipluso.com</p>
+    </div>
+    </footer>
 </body>
 </html>

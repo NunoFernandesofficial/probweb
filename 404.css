@@ -5,6 +5,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "DM Sans", sans-serif;
     color: var(--primary);
@@ -12,6 +13,15 @@ body {
 
 a {
     text-decoration: none;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    display: none;
+    height: 2rem;
+    width: 2rem;
 }
 
 #main {
@@ -70,23 +80,17 @@ nav {
     text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
     background: linear-gradient(to bottom, lightblue, lightblue);
     transition: all 0.5s ease 0s;
-  
-    
 }
-
-.menu-btn {
-    position: absolute;
-    top: 3rem;
-    right: 1rem;
-    display: none;
-    height: 2rem;
-    width: 2rem;
-}
-
 
 .btn:hover{
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
-    transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
+}
+
+.texto404 p{
+    text-align: center;
+    margin-top: 25vh;
+    font-size: 2rem;
 }
 
 footer {
@@ -94,6 +98,9 @@ footer {
     color: black;
     padding: 1.25rem;
     text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
 footer .social {
@@ -120,188 +127,67 @@ footer .Copyright {
 }
 
 footer .Copyright p {
-    margin: 0.3rem 0;
+    margin: 0.3rem 0;
 }
 
-.container {
-    margin: 50px 0;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1000px;
-  }
-  
-  .Eventcard {
-    position: relative;
-    width: 100%;
-    height: 250px;
-    margin-bottom: 40px;
-    border-radius: 10px;
-    background-color: #fff;
-    border: 2px solid #ddd;
-    font-size: 18px;
-    overflow: hidden;
-    box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
-    transition: box-shadow 0.2s ease, transform 0.2s ease;
-  }
-
-  .Eventcard:hover {
-    box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
-    transform: translate(0px, -5px);
-  }
-  
-
-  .img {
-    position: absolute;
-    height: 300px;
-    width: 400px;
-    top: 0;
-    left: 0;
-    transition: transform 0.2s ease;
-  }
-  .Eventcard:nth-child(2n) .img {
-    left: initial;
-    right: 0;
-  }
-
-  .Eventcard:hover .bar {
-    width: 70px;
-  }
-  .textbox {
-    position: absolute;
-    top: 7%;
-    bottom: 7%;
-    left: 430px;
-    width: calc(100% - 470px);
-    font-size: 17px;
-  }
-  .Eventcard:nth-child(2n) .textbox {
-    left: initial;
-    right: 430px;
-  }
-   .textbox::after {
-    display: none;
-    left: initial;
-    right: -55px;
-  }
- 
-  .textbox * {
-    position: relative;
-  }
-  .title {
-    font-size: 24px;
-  }
-
-  .description {
-    z-index: 3;
-    font-size: 17px;
-    color: #424242;
-    height: 125px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-  .cards {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    max-width: 100rem;
-    margin: 0 auto; /* Center the container */
-    padding: 0;
-    justify-content: center; /* Center the items */
-}
-
-.cards_item {
-    display: flex;
-    padding: 0.5rem; /* Decreased padding */
-}
-
-.card_image {
-    position: relative;
-    max-height: 200px; /* Decreased max-height */
-}
-
-.card_image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.card {
-    background-color: white;
-    border-radius: 0.25rem;
-    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-}
-
-.card_content {
-    position: relative;
-    padding: 8px 6px 16px 12px; /* Decreased padding */
-    margin: 8px 4px 4px 0; /* Decreased margin */
-    max-height: 180px; /* Decreased max-height */
-    overflow-y: scroll;
-}
-
-.card_content::-webkit-scrollbar {
-    width: 8px;
-}
-
-.card_content::-webkit-scrollbar-track {
-    box-shadow: 0;
-    border-radius: 0;
-}
-
-.card_content::-webkit-scrollbar-thumb {
-    background: #c89b3f;
-    border-radius: 15px;
-}
-
-.card_title {
-    position: relative;
-    margin: 0 0 16px; /* Decreased margin */
-    padding-bottom: 8px; /* Decreased padding */
-    text-align: center;
-    font-size: 18px; /* Decreased font-size */
-    font-weight: 700;
-}
-
-.card_title::after {
-    position: absolute;
-    display: block;
-    width: 40px; /* Decreased width */
-    height: 2px;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #c89b3f;
-    content: "";
-}
-
-.card_text p {
-    margin: 0 0 16px; /* Decreased margin */
-    font-size: 12px; /* Decreased font-size */
-    line-height: 1.5;
-}
-
-.card_text p:last-child {
-    margin: 0;
-}
-
-@media (min-width: 40rem) {
-    .cards_item {
-        width: 33.33%; /* Adjusted to 3 columns */
+@media screen and (max-width: 1024px) {
+    .logo {
+        margin-left: 5rem;
+        height: 6em;
+        width: 12em;
+    }
+    .nav-list {
+        margin-right: 5rem;
+        gap: 1rem;
+    }
+    .btn {
+        font-size: 12px;
+        padding: 0.5rem 0.75rem;
+    }
+    .texto404 p {
+        font-size: 1.5rem;
+        margin-top: 20vh;
     }
 }
 
-@media (min-width: 56rem) {
-    .cards_item {
-        width: 33.33%; /* Adjusted to 3 columns */
+@media screen and (max-width: 768px) {
+    .logo {
+        margin-left: 2rem;
+        height: 5em;
+        width: 10em;
+    }
+    .nav-list {
+        display: none;
+    }
+    .menu-btn {
+        display: block;
+    }
+    .nav-listBurger {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 5rem;
+        right: 1rem;
+        background: white;
+        border-radius: 0.5rem;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 1rem;
+        list-style: none;
+        gap: 1rem;
+        display: none;
+    }
+    .nav-listBurger.active {
+        display: flex;
+    }
+    .btn {
+        font-size: 10px;
+        padding: 0.5rem 0.75rem;
+    }
+    .texto404 p {
+        font-size: 1.25rem;
+        margin-top: 15vh;
     }
 }
-
-
-
 
 @media screen and (max-width: 480px) {
     .logo {
@@ -360,11 +246,13 @@ footer .Copyright p {
         width: 80%;
         text-align: center;
     }
-    
+
     .menu-btn {
-        top: 1rem;
+        margin-top: -3vh;
+        z-index: 3;
         display: block;
-        }
+    }
+
     .nav-listBurger {
         display: none;
         flex-direction: column;
@@ -380,16 +268,14 @@ footer .Copyright p {
         padding: 1rem;
         box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
         transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-        z-index: 4;
+        z-index: 2;
         list-style: none;
     }
-    
+
     .nav-listBurger.active {
         display: flex;
         transform: translateY(0);
         opacity: 1;
-        z-index: 5;
-
     }
     .menu-btn.menu-btn.active {
         top: 1rem;
@@ -399,7 +285,7 @@ footer .Copyright p {
     .menu-btn {
         cursor: pointer;
     }
-    
+
     .menu-btn.active + .nav-list {
         display: flex;
     }

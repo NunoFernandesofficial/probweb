@@ -2,10 +2,102 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contactos</title>
+    <link rel="stylesheet" href="contactos.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=SUA_API_KEY"></script>
+    <script defer src="mapa.js"></script>
 </head>
+
 <body>
-    contactos
+    <header>
+        <section id="main">
+            <script>
+                function navigateToDirectory() {
+                    window.location.href = "login.html";
+                }
+            </script>
+            <div class="headercontainer">
+                <nav>
+                    <img src="/logo.png" alt="Logoipluso" class="logo">
+                    <ul class="nav-list">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="serviços.html">Serviços</a></li>
+                        <li><a href="contactos.html">Contactos</a></li>
+                        <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+                        </ul>
+                        <img src="bgmenu.svg" alt="" class="menu-btn" id="menu-btn">
+                  <ul class="nav-listBurger" id="nav-list">
+                      <li><a href="#">Inicio</a></li>
+                      <li><a href="eventos.html">Eventos</a></li>
+                      <li><a href="serviços.html">Serviços</a></li>
+                      <li><a href="contactos.html">Contactos</a></li>
+                      <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+                  </ul>
+                </nav>
+            <script src="script.js"></script>
+        </section>
+    </header>
+
+    <main>
+        <section class="info-geral">
+            <h1>Contactos</h1>
+            <p>Morada: Campo Grande 400  1700- 098 Lisboa</p>
+            <p>Telefone: 217 548 625</p>
+            <p>Email: info@ipluso.pt</p>
+            <div class="icones">
+                <img src="icon-morada.png" alt="Morada">
+                <img src="icon-telefone.png" alt="Telefone">
+                <img src="icon-email.png" alt="Email">
+            </div>
+        </section>
+
+        <!-- Mapa Google -->
+        <section class="mapa">
+            <h2>Como chegar</h2>
+            <div id="mapa-google">API do Google Maps Aqui</div>
+        </section>
+
+        <section class="formulario">
+            <h2>Envie-nos uma mensagem</h2>
+            <form action="#" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="motivo">Motivo do contacto:</label>
+                <input type="text" id="motivo" name="motivo" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <section class="horarios">
+            <h2>Horários de Atendimento</h2>
+            <ul>
+                <li>Segunda a Sexta: 9h00 às 17h00</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social">
+            <li><a href="https://www.facebook.com/iplusofonia" target="_blank"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/iplusofonia/" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com/@ipluso-institutopolitecnic9048" target="_blank"><img src="youtube.png" alt="YouTube"></a></li>
+        </div>
+        <div class="Copyright">
+            <p>Copyright ©️ Studenthub IPLUSO</p>
+            <p>info@ipluso.com</p>
+        </div>
+    </footer>
 </body>
 </html>
+

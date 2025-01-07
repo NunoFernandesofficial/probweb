@@ -1,0 +1,186 @@
+/* header */
+#main {
+    background-color: #ffffff;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+.logo {
+    height: 7em;
+    width: 15em;
+    margin-left: 10rem;
+}
+
+.headercontainer {
+    margin: auto;
+}
+.menu-btn {
+    position: absolute;
+    top: 3rem;
+    right: 1rem;
+    display: none;
+    height: 2rem;
+    width: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, lightblue, transparent);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin-right: 10rem;
+    gap: 2rem;
+}
+
+.nav-list a {
+    color: black;
+}
+
+.nav-listBurger{
+    display: none;
+}
+
+.btn {
+    padding: 0.75rem 1rem;
+    background: white;
+    outline: 0;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    margin-top: -1rem;
+    border: 0;
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    border-radius: 4px;
+    font-size: 14px;
+    height: 30px;
+    padding: 0px 15px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    background: linear-gradient(to bottom, lightblue, lightblue);
+    transition: all 0.5s ease 0s;
+}
+
+.btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
+    transition: all 0.1s ease 0s;
+}
+
+/* informações gerais */
+.info-geral {
+    padding: 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+.info-geral .icones img {
+    width: 30px;
+    margin: 0 10px;
+}
+
+/* mapa */
+.mapa {
+    padding: 20px;
+    text-align: center;
+}
+
+#mapa-google {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* formulário de contacto */
+.formulario {
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+
+.formulario form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.formulario label {
+    margin-top: 10px;
+}
+
+.formulario input, .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* horários de atendimento */
+.horarios {
+    padding: 20px;
+    text-align: center;
+}
+
+.horarios ul {
+    list-style: none;
+    padding: 0;
+}
+
+.horarios li {
+    margin: 5px 0;
+}
+
+/* footer */
+footer {
+    background: linear-gradient(to bottom, transparent, lightblue);
+    color: black;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+footer .social {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 0.9375rem;
+    margin-bottom: 1.25rem;
+}
+
+footer .social li {
+    display: inline-block;
+}
+
+footer .social img {
+    width: 2rem;
+    height: 2rem;
+    transition: transform 0.3s;
+}
+
+footer .Copyright {
+    margin-top: 0.625rem;
+}
+
+footer .Copyright p {
+    margin: 0.3rem 0;
+}

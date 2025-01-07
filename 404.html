@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studenthub</title>
+    <link rel="stylesheet" href="404.css">
+    
+</head>
+<body>
+    <section id="main">
+        <script>
+            function navigateToDirectory() {
+                window.location.href = "login.html";
+            }
+        </script>
+        <div class="headercontainer">
+            <nav>
+                <img src="/logo.png" alt="Logoipluso" class="logo">
+                <ul class="nav-list">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="eventos.html">Espaços/Eventos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+                    </ul>
+                    <img src="bgmenu.svg" alt="" class="menu-btn" id="menu-btn">
+              <ul class="nav-listBurger" id="nav-list">
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="eventos.html">Eventos</a></li>
+                  <li><a href="serviços.html">Serviços</a></li>
+                  <li><a href="contactos.html">Contactos</a></li>
+                  <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+              </ul>
+            </nav>
+            <section>
+                <div class="texto404">
+                <p>Error 404 <br>A página que procura ja não se encontra disponivel</p>
+            </div>
+            </section>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    const menuBtn = document.getElementById("menu-btn");
+                    const navList = document.getElementById("nav-list");
+                
+                    menuBtn.addEventListener("click", function() {
+                        navList.classList.toggle("active");
+                    });
+                });
+                </script>
+                
+            <footer>
+
+        
+                <div class="social">
+                    <li><a href="https://www.facebook.com/iplusofonia" target="_blank"><img src="facebook.png" alt="Facebook"></a></li>
+                    <li><a href="https://www.instagram.com/iplusofonia/" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
+                    <li><a href="https://www.youtube.com/@ipluso-institutopolitecnic9048" target="_blank"><img src="youtube.png" alt="YouTube"></a></li>
+                </div>
+                <div class="Copyright">
+                <p>Copyright © Studenthub IPLUSO</p>
+                <p>info@ipluso.com</p>
+            </div>
+            </footer>
+        
+        </body>
+        </html>
+        

@@ -1,3 +1,4 @@
+/* Importa os tipos de letras "DM Sans" e "Forum" do Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
 
 * {
@@ -5,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: "DM Sans", sans-serif;
     color: var(--primary);
@@ -14,22 +16,26 @@ a {
     text-decoration: none;
 }
 
+/* Configura o background do elemento com ID #main */
 #main {
     background-color: #ffffff;
     background-position: bottom center;
     background-size: cover;
 }
 
+/* Logo */
 .logo {
     height: 7em;
     width: 15em;
     margin-left: 10rem;
 }
 
+/* Container do header */
 .headercontainer {
     margin: auto;
 }
 
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -48,10 +54,12 @@ nav {
     color: black;
 }
 
+/* Oculta a segunda  lista utilizada para o burger menu */
 .nav-listBurger{
     display: none;
 }
 
+/* Estilo para os botões */
 .btn {
     padding: 0.75rem 1rem;
     background: white;
@@ -83,12 +91,13 @@ nav {
     width: 2rem;
 }
 
-
+/* Efeito de hover nos botões */
 .btn:hover{
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
     transition: all 0.1s ease 0s;
 }
 
+/* Footer */
 footer {
     background: linear-gradient(to bottom, transparent, lightblue);
     color: black;
@@ -115,6 +124,7 @@ footer .social img {
     transition: transform 0.3s;
 }
 
+/* Copyright no Footer */
 footer .Copyright {
     margin-top: 0.625rem;
 }
@@ -129,9 +139,9 @@ footer .Copyright p {
     margin-left: auto;
     margin-right: auto;
     width: 1000px;
-  }
-  
-  .Eventcard {
+}
+
+.Eventcard {
     position: relative;
     width: 100%;
     height: 250px;
@@ -143,89 +153,105 @@ footer .Copyright p {
     overflow: hidden;
     box-shadow: 0 4px 21px -12px rgba(0, 0, 0, .66);
     transition: box-shadow 0.2s ease, transform 0.2s ease;
-  }
+}
 
-  .Eventcard:hover {
+/* Efeito de hover nos cartões de eventos */
+.Eventcard:hover {
     box-shadow: 0 34px 32px -33px rgba(0, 0, 0, .18);
     transform: translate(0px, -5px);
-  }
+}
   
-
-  .img {
+/* Imagem dentro dos cartões de eventos */
+.img {
     position: absolute;
     height: 300px;
     width: 400px;
     top: 0;
     left: 0;
     transition: transform 0.2s ease;
-  }
-  .Eventcard:nth-child(2n) .img {
+}
+
+/* Alinhar imagem para cartões pares */
+.Eventcard:nth-child(2n) .img {
     left: initial;
     right: 0;
-  }
+}
 
-  .Eventcard:hover .bar {
+.Eventcard:hover .bar {
     width: 70px;
-  }
-  .textbox {
+}
+
+/* Texto nos cartões */
+.textbox {
     position: absolute;
     top: 7%;
     bottom: 7%;
     left: 430px;
     width: calc(100% - 470px);
     font-size: 17px;
-  }
-  .Eventcard:nth-child(2n) .textbox {
+}
+
+/* Alinhar texto para cartões pares */
+.Eventcard:nth-child(2n) .textbox {
     left: initial;
     right: 430px;
-  }
-   .textbox::after {
+}
+
+/* Remoção de elementos no texto do cartão */
+.textbox::after {
     display: none;
     left: initial;
     right: -55px;
-  }
- 
-  .textbox * {
-    position: relative;
-  }
-  .title {
-    font-size: 24px;
-  }
+}
 
-  .description {
+.textbox * {
+    position: relative;
+}
+
+/* Título dentro do cartão */
+.title {
+    font-size: 24px;
+}
+
+/* Descrição dentro do cartão */
+.description {
     z-index: 3;
     font-size: 17px;
     color: #424242;
     height: 125px;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  .cards {
+}
+
+/* Container para vários cartões */
+.cards {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     max-width: 100rem;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto; 
     padding: 0;
-    justify-content: center; /* Center the items */
+    justify-content: center; 
 }
 
 .cards_item {
     display: flex;
-    padding: 0.5rem; /* Decreased padding */
+    padding: 0.5rem;
 }
 
 .card_image {
     position: relative;
-    max-height: 200px; /* Decreased max-height */
+    max-height: 200px; 
 }
 
+/* Estilo para a imagem dentro do cartão */
 .card_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
+/* Cartão */
 .card {
     background-color: white;
     border-radius: 0.25rem;
@@ -235,11 +261,12 @@ footer .Copyright p {
     overflow: hidden;
 }
 
+/* Conteúdo do cartão */
 .card_content {
     position: relative;
-    padding: 8px 6px 16px 12px; /* Decreased padding */
-    margin: 8px 4px 4px 0; /* Decreased margin */
-    max-height: 180px; /* Decreased max-height */
+    padding: 8px 6px 16px 12px;
+    margin: 8px 4px 4px 0; 
+    max-height: 180px; 
     overflow-y: scroll;
 }
 
@@ -247,10 +274,12 @@ footer .Copyright p {
     width: 8px;
 }
 
+
 .card_content::-webkit-scrollbar-track {
     box-shadow: 0;
     border-radius: 0;
 }
+
 
 .card_content::-webkit-scrollbar-thumb {
     background: #c89b3f;
@@ -259,17 +288,17 @@ footer .Copyright p {
 
 .card_title {
     position: relative;
-    margin: 0 0 16px; /* Decreased margin */
-    padding-bottom: 8px; /* Decreased padding */
+    margin: 0 0 16px; 
+    padding-bottom: 8px; 
     text-align: center;
-    font-size: 18px; /* Decreased font-size */
+    font-size: 18px; 
     font-weight: 700;
 }
 
 .card_title::after {
     position: absolute;
     display: block;
-    width: 40px; /* Decreased width */
+    width: 40px; 
     height: 2px;
     bottom: 0;
     left: 50%;
@@ -279,8 +308,8 @@ footer .Copyright p {
 }
 
 .card_text p {
-    margin: 0 0 16px; /* Decreased margin */
-    font-size: 12px; /* Decreased font-size */
+    margin: 0 0 16px; 
+    font-size: 12px; 
     line-height: 1.5;
 }
 
@@ -290,26 +319,27 @@ footer .Copyright p {
 
 @media (min-width: 40rem) {
     .cards_item {
-        width: 33.33%; /* Adjusted to 3 columns */
+        width: 33.33%; 
     }
 }
+
 
 @media (min-width: 56rem) {
     .cards_item {
-        width: 33.33%; /* Adjusted to 3 columns */
+        width: 33.33%; 
     }
 }
 
-
-
-
+/* Media query para dispositivos com largura máxima de 480px */
 @media screen and (max-width: 480px) {
+    /* Logo: redução de tamanho */
     .logo {
         height: 4em;
         width: 8em;
         margin-left: 2rem;
     }
 
+    /* navlist: ajustes para dispositivos mais pequenos */
     .nav-list {
         margin-right: 2rem;
         gap: 0.5rem;
@@ -322,6 +352,7 @@ footer .Copyright p {
     .main-content p {
         max-width: 10rem;
     }
+
     .headercontainer{
         position: static;
     }
@@ -331,25 +362,32 @@ footer .Copyright p {
         align-items: center;
     }
 
+    /* Cartões de eventos: redução de largura */
     .card {
         width: 15rem;
     }
+
     .eventsContainer{
         flex-direction: column;
         align-items: center;
     }
 
+    /* Texto principal: ajuste de largura e posicionamento */
     .text{
         top: 50%;
         left: 10px;
         height: 90%;
         width: 108%;
     }
+
+    /* Notícia: redução de dimensões */
     .noticia {
         width: 15rem;
         min-width: 15rem;
         height: 25rem;
     }
+
+    /* Texto principal: redução do tamanho da fonte */
     .main-text {
         font-size: 0.8rem;
     }
@@ -364,7 +402,8 @@ footer .Copyright p {
     .menu-btn {
         top: 1rem;
         display: block;
-        }
+    }
+
     .nav-listBurger {
         display: none;
         flex-direction: column;
@@ -384,6 +423,7 @@ footer .Copyright p {
         list-style: none;
     }
     
+    /* Lista do burger quando ativa */
     .nav-listBurger.active {
         display: flex;
         transform: translateY(0);
@@ -391,11 +431,13 @@ footer .Copyright p {
         z-index: 5;
 
     }
+
     .menu-btn.menu-btn.active {
         top: 1rem;
         display: block;
         z-index: 3;
     }
+
     .menu-btn {
         cursor: pointer;
     }
@@ -403,10 +445,15 @@ footer .Copyright p {
     .menu-btn.active + .nav-list {
         display: flex;
     }
+
+    /* Oculta a lista da navabr padrão */
     .nav-list{
         display: none;
     }
+
+     /* Botões no carrossel: redução de espaço */
     .carousel button {
         padding: 0.25rem;
     }
 }
+

@@ -1,11 +1,14 @@
+/* Importação das fontes a serem utilizadas no site */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
 
+/* Estilos para margens  */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Corpo da página */
 body {
     font-family: "DM Sans", sans-serif;
     color: var(--primary);
@@ -15,22 +18,26 @@ a {
     text-decoration: none;
 }
 
+/* Design da zona principal */
 #main {
     background-color: #ffffff;
     background-position: bottom center;
     background-size: cover;
 }
 
+/* Estilo do logo */
 .logo {
     height: 7em;
     width: 15em;
     margin-left: 10rem;
 }
 
+/* Centralizar Header */
 .headercontainer {
     margin: auto;
 }
 
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -49,7 +56,7 @@ nav {
     color: black;
 }
 
-.nav-listBurger{
+.nav-listBurger {
     display: none;
 }
 
@@ -71,15 +78,14 @@ nav {
     text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
     background: linear-gradient(to bottom, lightblue, lightblue);
     transition: all 0.5s ease 0s;
-  
-    
 }
-.btn:hover{
+
+.btn:hover {
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
     transition: all 0.1s ease 0s;
 }
 
-
+/* Zona principal do conteúdo */
 .main-content {
     display: flex;
     flex-direction: column;
@@ -89,12 +95,12 @@ nav {
     color: gray;
 }
 
+/* Header conteudo principal*/
 .main-content .intro-heading {
     font-size: 3rem;
     color: rgb(102, 193, 223);
     margin-bottom: 5vh;
 }
-
 
 .menu-btn {
     position: absolute;
@@ -105,6 +111,7 @@ nav {
     width: 2rem;
 }
 
+/* Footer */
 footer {
   background: linear-gradient(to bottom, transparent, lightblue);
   color: black;
@@ -142,9 +149,8 @@ footer .Copyright p {
     margin: 0.3rem 0;
 }
 
-
-.LoginRegister{
-
+/* Formulário de Login e Registo */
+.LoginRegister {
     overflow: hidden;
     max-width: 390px;
     margin: 0 auto;
@@ -152,20 +158,23 @@ footer .Copyright p {
     padding: 30px;
     border-radius: 5px;
     box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
-  }
-.title-text{
+}
+
+.title-text {
     display: flex;
     width: 200%;
-  }
+}
 
-.title{
+.title {
     width: 50%;
     font-size: 35px;
     font-weight: 600;
     text-align: center;
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-  }
-.slide-controls{
+}
+
+/* Botões (Login/Registo) */
+.slide-controls {
     position: relative;
     display: flex;
     height: 50px;
@@ -175,8 +184,9 @@ footer .Copyright p {
     justify-content: space-between;
     border: 1px solid lightgrey;
     border-radius: 5px;
-  }
-.slide{
+}
+
+.slide {
     height: 100%;
     width: 100%;
     color: #fff;
@@ -187,12 +197,13 @@ footer .Copyright p {
     cursor: pointer;
     z-index: 1;
     transition: all 0.6s ease;
-  }
-label.signup{
-    color: #000;
-  }
+}
 
-.slider-tab{
+label.signup {
+    color: #000;
+}
+
+.slider-tab {
     position: absolute;
     height: 100%;
     width: 50%;
@@ -201,52 +212,54 @@ label.signup{
     border-radius: 5px;
     background: -webkit-linear-gradient(left, #3db9d8, #197ab3);
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-  }
-input[type="radio"]{
-    display: none;
-  }
+}
 
-/* Utilizado o seletor ~ para fazer tratamento da cor dos textos e das tabs conforme o input "radio" clicado */
-  #signup:checked ~ .slider-tab{
+/* Inputs radio */
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked ~ .slider-tab {
     left: 50%;
-  }
-  #signup:checked ~ label.signup{
+}
+#signup:checked ~ label.signup {
     color: #fff;
     cursor: default;
     user-select: none;
-  }
-  #signup:checked ~ label.login{
+}
+#signup:checked ~ label.login {
     color: #000;
-  }
-  #login:checked ~ label.signup{
+}
+#login:checked ~ label.signup {
     color: #000;
-  }
-  #login:checked ~ label.login{
+}
+#login:checked ~ label.login {
     cursor: default;
     user-select: none;
-  }
- 
-  .form-container{
+}
+
+.form-container {
     width: 100%;
     overflow: hidden;
-  }
- 
-  .form-inner{
+}
+
+.form-inner {
     display: flex;
     width: 200%;
-  }
+}
 
-  .form-inner form{
+.form-inner form {
     width: 50%;
     transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
-  }
-.field{
+}
+
+.field {
     height: 50px;
     width: 100%;
     margin-top: 20px;
-  }
+}
 
-.field input{
+.field input {
     height: 100%;
     width: 100%;
     outline: none;
@@ -256,56 +269,59 @@ input[type="radio"]{
     border-bottom-width: 2px;
     font-size: 17px;
     transition: all 0.3s ease;
-  }
+}
 
-  .field input:focus{
+.field input:focus {
     border-color: #197ab3;
-    /* box-shadow: inset 0 0 3px #fb6aae; */
-  }
+}
 
-  .field input::placeholder{
+.field input::placeholder {
     color: #999;
     transition: all 0.3s ease;
-  }
+}
 
-  input:focus::placeholder{
+input:focus::placeholder {
     color: #b3b3b3;
-  }
-.pass-link{
-    margin-top: 5px;
-  }
+}
 
-.signup-link{
+.pass-link {
+    margin-top: 5px;
+}
+
+.signup-link {
     text-align: center;
     margin-top: 30px;
-  }
+}
 
 .pass-link a,
-.signup-link a{
+.signup-link a {
     color: #197ab3;
     text-decoration: none;
-  }
+}
 
-  form .btn{
+form .btn {
     height: 50px;
     width: 100%;
     border-radius: 5px;
     position: relative;
     overflow: hidden;
-  }
-  form .btn .btn-layer{
+}
+
+form .btn .btn-layer {
     height: 100%;
     width: 300%;
     position: absolute;
     left: -100%;
     background: -webkit-linear-gradient(left, #3db9d8, #197ab3);
     border-radius: 5px;
-    transition: all 0.4s ease;;
-  }
-  form .btn:hover .btn-layer{
+    transition: all 0.4s ease;
+}
+
+form .btn:hover .btn-layer {
     left: 0;
-  }
-  form .btn input[type="submit"]{
+}
+
+form .btn input[type="submit"] {
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -318,5 +334,6 @@ input[type="radio"]{
     font-size: 20px;
     font-weight: 500;
     cursor: pointer;
-  }
+}
+
 

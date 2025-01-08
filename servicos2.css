@@ -1,6 +1,5 @@
-/* Fontes */
+/* header */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +20,6 @@ a {
     background-size: cover;
 }
 
-/* Estilos para o botão do menu */
 .menu-btn {
     position: absolute;
     top: 3rem;
@@ -31,7 +29,6 @@ a {
     width: 2rem;
 }
 
-/* Logo */
 .logo {
     height: 7em;
     width: 15em;
@@ -42,7 +39,6 @@ a {
     margin: auto;
 }
 
-/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -83,27 +79,24 @@ nav {
     background: linear-gradient(to bottom, lightblue, lightblue);
     transition: all 0.5s ease 0s;
 }
-
 .intro-heading {
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
-
-/* Efeito de hover para o botão */
 .btn:hover{
     box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 40px;
     transition: all 0.1s ease 0s;
 }
 
-/* Estilos gerais do body */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
 }
+
 
 /*Secção de Introdução Serviços*/
 .introducao {
@@ -122,6 +115,7 @@ body {
     margin-top: 1rem;
 }
 
+/* Blocos Informativos*/
 .blocos-informativos {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -129,7 +123,6 @@ body {
     padding: 2rem;
 }
 
-/* Estilos para cada bloco */
 .bloco {
     background: white;
     border-radius: 8px;
@@ -149,14 +142,12 @@ body {
     text-align: center;
 }
 
-/* Titulo da secção de serviços */
 .servicos-dinamicos h2 {
     margin-bottom: 1.5rem;
     font-size: 2rem;
     color: #333;
 }
 
-/*Carrossel de serviços */
 .carrossel-servicos {
     display: flex;
     justify-content: center;
@@ -176,19 +167,16 @@ body {
     flex: 1 1 calc(33.333% - 1rem); /* Ajusta a largura dos itens */
 }
 
-/* Efeito de hover para os itens do carrossel */
 .carrossel-item:hover {
     transform: scale(1.05);
 }
 
-/* Estilos para os ícones dos itens do carrossel */
 .carrossel-item .icone {
     font-size: 2rem;
     color: #007BFF;
     margin-bottom: 0.5rem;
     text-align: center;
 }
-
 
 .carrossel-item h3 {
     margin-top: 0;
@@ -197,12 +185,10 @@ body {
     text-align: center;
 }
 
-
 .carrossel-item p {
     font-size: 1rem;
     color: #666;
 }
-
 
 /* Área de FAQs*/
 .faqs {
@@ -210,12 +196,9 @@ body {
     text-align: center;
 }
 
-
 .faq {
     text-align: center;
 }
-
-/* Secção de Contacto */
 .contato {
     display: flex;
     justify-content: center;
@@ -232,7 +215,6 @@ body {
     text-align: center;
 }
 
-/* Formulário de contacto */
 .formulario-contato {
     display: flex;
     flex-direction: column;
@@ -243,7 +225,6 @@ body {
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-
 
 .formulario-contato label {
     
@@ -258,7 +239,6 @@ body {
     font-size: 16px;
 }
 
-
 .botao-enviar {
     padding: 10px 20px;
     border: none;
@@ -270,18 +250,16 @@ body {
     transition: background-color 0.3s;
 }
 
-
 .botao-enviar:hover {
     background-color: #0056b3;
 }
-
 
 /* Secção Imagens em Carrossel */
 .carrossel2 {
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-width: 800px; /* Define um tamanho máximo razoável para as imagens nao excederem */
+    max-width: 800px; /* Define um tamanho máximo razoável */
     margin: 0 auto;
 }
 
@@ -290,22 +268,18 @@ body {
     transition: transform 0.5s ease-in-out;
 }
 
-
-/* Estilos para cada slide */
 .slide {
-    min-width: 100%; /* Cada slide ocupa 100% da largura do container */
+    min-width: 100%; /* Cada slide ocupa 100% da largura do contêiner */
     height: auto;
     display: none; /* Esconde todos os slides inicialmente */
     border-radius: 8px;
     object-fit: cover;
 }
 
-
 .slide.active {
     display: block; /* Mostra apenas o slide ativo */
 }
 
-/*Botões de navegação do carrossel */
 .prev, .next {
     position: absolute;
     top: 50%;
@@ -318,16 +292,13 @@ body {
     z-index: 1;
 }
 
-
 .prev {
     left: 10px;
 }
 
-
 .next {
     right: 10px;
 }
-
 
 /* Botão de Contactos*/
 .botao {
@@ -346,6 +317,31 @@ body {
     background: #0056b3;
 }
 
+/* Media Queries para responsividade */
+@media (max-width: 768px) {
+    .blocos-informativos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bloco {
+        width: 90%;
+    }
+
+    .prev, .next {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bloco {
+        width: 100%;
+    }
+
+    .prev, .next {
+        padding: 2px;
+    }
+}
 
 /* footer */
 footer {
@@ -374,38 +370,10 @@ footer .social img {
     transition: transform 0.3s;
 }
 
-/* Estilos para a secção de direitos autorais no footer */
 footer .Copyright {
     margin-top: 0.625rem;
 }
 
 footer .Copyright p {
     margin: 0.3rem 0;
-}
-
-
-/* Media Queries para responsividade */
-@media (max-width: 768px) {
-    .blocos-informativos {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .bloco {
-        width: 90%;
-    }
-
-    .prev, .next {
-        padding: 5px;
-    }
-}
-
-@media (max-width: 480px) {
-    .bloco {
-        width: 100%;
-    }
-
-    .prev, .next {
-        padding: 2px;
-    }
 }

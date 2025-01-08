@@ -1,4 +1,6 @@
+/* Importa as fontes utilizadas  */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -14,18 +16,21 @@ a {
     text-decoration: none;
 }
 
+/* Wrapper principal que organiza a página com flexbox */
 .wrapper {
     display: flex;
     flex-grow: 1;
     height: 100vh;
 }
 
+/* Barra lateral e espaçamento interno */
 .sidebar {
     background: linear-gradient(to right, lightblue, white);
     padding: 1rem;
     min-width: 250px;
 }
 
+/* Centraliza o logotipo e adiciona espaço na zona de baixo */
 .logo {
     display: block;
     margin: 0 auto 1rem;
@@ -43,11 +48,13 @@ a {
     text-decoration: none;
 }
 
+/* Efeito hover nos links */
 .nav-list a:hover {
     background: rgba(0, 0, 0, 0.1);
     border-radius: 4px;
 }
 
+/* Botão  secundário */
 .btn-secondary {
     background: white;
     border: none;
@@ -63,6 +70,7 @@ a {
     background: rgba(0, 0, 0, 0.1);
 }
 
+/* Área principal do conteúdo*/
 .content {
     flex: 1;
     padding: 2rem;
@@ -70,16 +78,19 @@ a {
     overflow-y: auto;
 }
 
+/* container centralizado com largura total */
 .container {
     width: 100%;
     margin: 0 auto;
 }
 
+/* Mensagem de boas-vindas centralizada */
 .welcome-message {
     text-align: center;
     margin: 2rem 0;
 }
 
+/* Cartões*/
 .card {
     background: white;
     border-radius: 8px;
@@ -88,20 +99,23 @@ a {
     margin: 1rem 0;
 }
 
+/* Título dos cartões com espaçamento inferior */
 .card h2 {
     margin-bottom: 0.5rem;
 }
 
+/* Texto dentro dos cartões  */
 .card p {
     color: #666;
 }
 
+/* footer */
 footer {
     padding: 1rem;
     text-align: center;
     bottom: 0;
 }
-    
+
 footer .social {
     list-style: none;
     display: flex;
@@ -114,6 +128,7 @@ footer .social img {
     height: 2rem;
 }
 
+/* Texto de copyright no footer */
 footer .Copyright {
     margin-top: 1rem;
 }

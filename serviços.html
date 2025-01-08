@@ -1,11 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+        <!-- Definição de metadados do ficheiro html e link ao ficheiro CSS -->
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="logo.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Serviços</title>
+    <link rel="stylesheet" href="serviços.css">
 </head>
+
 <body>
-    servicos
+    <section id="main">
+                <!-- Função javascript para direcionar para a página de login ao clicar no botão -->
+
+        <script>
+            function navigateToDirectory() {
+                window.location.href = "login.html";
+            }
+        </script>
+                <!--  Navbar -->
+
+        <div class="headercontainer">
+            <nav>
+                <img src="/logo.png" alt="Logoipluso" class="logo">
+                <ul class="nav-list">
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="eventos.html">Espaços/Eventos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+                    </ul>
+                    <img src="bgmenu.svg" alt="" class="menu-btn" id="menu-btn">
+                <!-- Navbar para dispositivos móveis -->
+
+              <ul class="nav-listBurger" id="nav-list">
+                  <li><a href="#">Inicio</a></li>
+                  <li><a href="eventos.html">Eventos</a></li>
+                  <li><a href="serviços.html">Serviços</a></li>
+                  <li><a href="contactos.html">Contactos</a></li>
+                  <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
+              </ul>
+            </nav>
+            <div class="main-content">
+                <h1 class="intro-heading">Welcome To Studenthub</h1>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <!--Zona Introdutória-->
+        <section class="introducao">
+            <h1>Os Nossos Serviços</h1>
+            <p>Explore as opções de apoio disponíveis para estudantes.</p>
+        </section>
+
+        <!--Serviços Disponíveis em Colunas-->
+        <section class="blocos-informativos">
+            <div class="bloco">
+                <div class="icone">📚</div>
+                <h2>Biblioteca Académica</h2>
+                <p>Disponibiliza uma vasta coleção de livros, artigos e recursos digitais, além de áreas de estudo silenciosas e colaborativas.</p>
+            </div>
+            <div class="bloco">
+                <div class="icone">🛠️</div>
+                <h2>Suporte Técnico</h2>
+                <p>Assistência para resolução de problemas com equipamentos, software e acesso às plataformas digitais da universidade.</p>
+            </div>
+            <div class="bloco">
+                <div class="icone">🎓</div>
+                <h2>Orientação Profissional</h2>
+                <p>Sessões personalizadas para ajudar os estudantes a planearem carreiras, prepararem currículos e se destacarem no mercado de trabalho.</p>
+            </div>
+            <div class="bloco">
+                <div class="icone">🧠</div>
+                <h2>Apoio Psicopedagógico</h2>
+                <p>Oferece suporte para a saúde mental e académica dos estudantes, com consultas individuais e workshops sobre gestão do stress.</p>
+            </div>
+        </section>
+
+        <!--Secção de Imagens (em formato carrossel)-->
+        <section>
+            <div class="carrossel2">
+                <button class="prev" onclick="showPrevSlide()">&#10094;</button>
+                <div class="slides">
+                    <img src="/pág serviços/img-1.jpg" alt="Imagem 1" class="slide active">
+                    <img src="/pág serviços/img-4.jpg" alt="Imagem 2" class="slide">
+                    <img src="/pág serviços/img-3.jpg" alt="Imagem 3" class="slide">
+                </div>
+                <button class="next" onclick="showNextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <!--Secção Dinâmica de Serviços-->
+        <section class="servicos-dinamicos">
+            <h2>Serviços Mais Requisitados</h2>
+            <div class="carrossel-servicos">
+                <div class="carrossel-item">
+                    <div class="icone">❤️</div>
+                    <h3>Seguro de Saúde</h3>
+                    <p>Oferecemos planos de saúde abrangentes para estudantes.</p>
+                </div>
+                <div class="carrossel-item">
+                    <div class="icone">💼</div>
+                    <h3>Consultas de Carreira</h3>
+                    <p>Ajuda personalizada para planejar sua carreira e preparar seu currículo.</p>
+                </div>
+                <div class="carrossel-item">
+                    <div class="icone">🛠️</div>
+                    <h3>Workshops Técnicos</h3>
+                    <p>Participe de workshops para aprimorar suas habilidades técnicas.</p>
+                </div>
+            </div>
+        </section>
+
+        <!--FAQs-->
+        <section class="faqs">
+                <h2>FAQs</h2>
+                <h3>Encontre respostas rápidas às perguntas mais frequentes sobre os nossos serviços.</h3>
+                <br>
+            <div class="faq">
+                <h4>Como posso reservar uma sala de estudo na biblioteca?</h4>
+                <p>A reserva pode ser feita diretamente na página de Serviços do StudentHub, na seção "Biblioteca Académica". Basta selecionar o horário desejado e confirmar a reserva com o seu login de estudante.</p>
+                <br>
+                <h4>O que fazer se tiver problemas técnicos com o StudentHub?</h4>
+                <p>Caso enfrente dificuldades técnicas, pode contactar o Suporte Técnico através do formulário de contacto na página de Serviços ou pelo e-mail disponibilizado. O atendimento é rápido e eficiente.</p>
+                <br>
+                <h4>Como posso candidatar-me a estágios pelo Centro de Estágios?</h4>
+                <p>Para candidatar-se a um estágio, aceda à seção "Centro de Estágios" no StudentHub, onde encontrará uma lista de oportunidades disponíveis. Siga as instruções para enviar o seu currículo e candidatura.</p>
+                <br>
+                <h4>Quem pode aceder ao Apoio Psicopedagógico?</h4>
+                <p>O serviço está disponível para todos os estudantes matriculados na universidade. Pode marcar uma consulta através do formulário na página de Serviços ou dirigindo-se diretamente ao balcão de apoio.</p>
+            </div>
+        </section>
+
+        <!--Formulário-->
+        <section class="contato">
+            <div class="contatos"><h2>Entra em Contato Connosco</h2>
+            <form class="formulario-contato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" class="input-text" required>
+        
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" class="input-text" required>
+        
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" class="textarea" rows="4" required></textarea>
+        
+                <button type="submit" class="botao-enviar">Enviar</button>
+                
+            </form>
+        </div>
+        </section>
+
+        <!--Botão para a página de Contacto-->
+        <section>
+            <div>
+                <button class="botao" onclick="window.location.href='contactos.html'">Contactos</button>
+            </div>
+        </section>
+    </main>
+    <!-- Footer da página -->
+
+    <footer>
+        <div class="social">
+                    <!-- Links para as redes sociais do ipluso-->
+
+            <li><a href="https://www.facebook.com/iplusofonia" target="_blank"><img src="facebook.png" alt="Facebook"></a></li>
+            <li><a href="https://www.instagram.com/iplusofonia/" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
+            <li><a href="https://www.youtube.com/@ipluso-institutopolitecnic9048" target="_blank"><img src="youtube.png" alt="YouTube"></a></li>
+        </div>
+                <!-- Informações de copyright com email-->
+
+        <div class="Copyright">
+            <p>Copyright ©️ Studenthub IPLUSO</p>
+            <p>info@ipluso.com</p>
+        </div>
+    </footer>
+
+    <script>
+        let slideIndex = 0;
+        showSlides(slideIndex);
+
+        function showPrevSlide() {
+            showSlides(slideIndex -= 1);
+        }
+
+        function showNextSlide() {
+            showSlides(slideIndex += 1);
+        }
+
+        function showSlides(n) {
+            let slides = document.getElementsByClassName("slide");
+            if (n >= slides.length) { slideIndex = 0 }
+            if (n < 0) { slideIndex = slides.length - 1 }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");
+            }
+            slides[slideIndex].classList.add("active");
+        }
+    </script>
 </body>
 </html>

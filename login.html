@@ -1,86 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Definição de metadados do ficheiro html e link ao ficheiro CSS -->
     <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="logo.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Studenthub</title>
     <link rel="stylesheet" href="login.css">
-    
 </head>
 <body>
     <section id="main">
+        <!-- Função javascript para direcionar para a página de login ao clicar no botão -->
         <script>
             function navigateToDirectory() {
                 window.location.href = "login.html";
             }
         </script>
+
         <div class="headercontainer">
             <nav>
                 <img src="/logo.png" alt="Logoipluso" class="logo">
-                <ul class="nav-list">
+        <!--  Navbar -->
+        <ul class="nav-list">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="eventos.html">Espaços/Eventos</a></li>
                     <li><a href="serviços.html">Serviços</a></li>
                     <li><a href="contactos.html">Contactos</a></li>
-                    <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
-                    </ul>
-                    <img src="bgmenu.svg" alt="" class="menu-btn" id="menu-btn">
+                    <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Registar</button></li>
+                </ul>
+              <img src="bgmenu.svg" alt="" class="menu-btn" id="menu-btn">
+              <!-- Navbar para dispositivos móveis -->
               <ul class="nav-listBurger" id="nav-list">
-                  <li><a href="#">Inicio</a></li>
-                  <li><a href="eventos.html">Eventos</a></li>
-                  <li><a href="serviços.html">Serviços</a></li>
-                  <li><a href="contactos.html">Contactos</a></li>
-                  <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Register</button></li>
-              </ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="eventos.html">Eventos</a></li>
+                    <li><a href="serviços.html">Serviços</a></li>
+                    <li><a href="contactos.html">Contactos</a></li>
+                    <li><button class="btn btn-secondary" id="loginbtn" onclick="navigateToDirectory()">Login/Registar</button></li>
+                </ul>
             </nav>
+
+            <!-- Zona de login e registo -->
             <section>
                 <div class="LoginRegister">
                     <div class="title-text">
                        <div class="title login">
-                          Login Form
+                        Entrar
                        </div>
                        <div class="title signup">
-                          Signup Form
+                        Inscrever
                        </div>
                     </div>
                     <div class="form-container">
                        <div class="slide-controls">
-                        <!--Foi utilizado input type radio devido à sua logica de apenas ter uma opçõa checked-->
+                          <!-- Inputs para selecionar entre login e registo -->
                           <input type="radio" name="slide" id="login" checked>
                           <input type="radio" name="slide" id="signup">
-                          <label for="login" class="slide login">Login</label>
-                          <label for="signup" class="slide signup">Signup</label>
+                          <label for="login" class="slide login">Entrar</label>
+                          <label for="signup" class="slide signup">Inscrever</label>
+                          <!-- slider para transição -->
                           <div class="slider-tab"></div>
                        </div>
+                       <!-- Área interna do formulário -->
                        <div class="form-inner">
+                          <!-- Formulário de login -->
                           <form action="#" class="login">
                              <div class="field">
-                                <input type="text" placeholder="Email Address" required>
+                                <input type="text" placeholder="Endereço email" required>
                              </div>
                              <div class="field">
                                 <input type="password" placeholder="Password" required>
                              </div>
+                             <!-- Link para recuperação de senha -->
                              <div class="pass-link">
-                                <a href="#">Forgot password?</a>
+                                <a href="#">Esqueceu-se da password</a>
                              </div>
+                             <!-- Botão de login -->
                              <div class="field btn">
                                 <div class="btn-layer"></div>
                                 <input type="submit" value="Login">
                              </div>
                              <div class="signup-link">
-                                Not a member? <a href="">Signup now</a>
+                                Não é membro? <a href="">Inscrever</a>
                              </div>
                           </form>
+                          <!-- Formulário de registo -->
                           <form action="#" class="signup">
                              <div class="field">
-                                <input type="text" placeholder="Email Address" required>
+                                <input type="text" placeholder="Endereço email" required>
                              </div>
                              <div class="field">
                                 <input type="password" placeholder="Password" required>
                              </div>
                              <div class="field">
-                                <input type="password" placeholder="Confirm password" required>
+                                <input type="password" placeholder="Confirmar password" required>
                              </div>
+                             <!-- Botão de registo -->
                              <div class="field btn">
                                 <div class="btn-layer"></div>
                                 <input type="submit" value="Signup">
@@ -89,6 +103,8 @@
                        </div>
                     </div>
                  </div>
+
+                 <!-- Script para alternar entre login e registo -->
                  <script>
                     const loginText = document.querySelector(".title-text .login");
                     const loginForm = document.querySelector("form.login");
@@ -110,20 +126,20 @@
                  </script>
             </section>
 
+    <!-- Footer da página -->
             <footer>
-
-        
-                <div class="social">
+        <!-- Links para as redes sociais do ipluso-->
+        <div class="social">
                     <li><a href="https://www.facebook.com/iplusofonia" target="_blank"><img src="facebook.png" alt="Facebook"></a></li>
                     <li><a href="https://www.instagram.com/iplusofonia/" target="_blank"><img src="instagram.png" alt="Instagram"></a></li>
                     <li><a href="https://www.youtube.com/@ipluso-institutopolitecnic9048" target="_blank"><img src="youtube.png" alt="YouTube"></a></li>
                 </div>
-                <div class="Copyright">
+        <!-- Informações de copyright com email-->
+        <div class="Copyright">
                 <p>Copyright © Studenthub IPLUSO</p>
                 <p>info@ipluso.com</p>
-            </div>
+                </div>
             </footer>
-        
         </body>
         </html>
-        
+
